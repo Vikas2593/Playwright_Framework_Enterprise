@@ -1,0 +1,26 @@
+{
+  "name": "playwright-saucedemo",
+  "version": "1.0.0",
+  "description": "Enterprise-level Playwright framework for SauceDemo",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "playwright install",
+    "start": "playwright dev",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:deubg": "playwright test --debug",
+    "test:report": "playwright generate-report",
+    "test:allure": "npx playwright generate-report --output reports/allure",
+    "test:ortoni": "npx playwright generate-report --output reports/ortoni",
+    "test:docker": "docker build -t playwright-saucedemo . && docker run -e npm_config_ENV=prod --name playwright-saucedemo-container playwright-saucedemo"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "ortoni-report": "^1.0.0",
+    "winston": "^3.7.1"
+  },
+  "dependencies": {
+    "html-reporter": "^11.14.1",
+    "package.json": "^2.0.1"
+  }
+}

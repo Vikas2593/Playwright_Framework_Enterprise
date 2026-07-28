@@ -1,0 +1,32 @@
+import { defineConfig } from "@playwright/test";
+
+export default defineConfig({
+  testDir: "./tests",
+  reporter: [
+    ["list"], 
+    ["json", { outputFile: "results.json" }],
+    ["html", { outputFile: "reports/html/report.html"}]],
+  outputDir: "results",
+  use: {
+    headless: false,
+    viewport: { width: 1280, height: 720 },
+    ignoreHTTPSErrors: true,
+    video: "on-first-failure",
+    screenshot: "on-first-failure"
+  },
+  projects: [
+    {
+      name: "chromium",
+      use: { browserName: "chromium" }
+    }
+    // {
+    //   name: "firefox",
+    //   use: { browserName: "firefox" }
+    // }
+  ],
+  webServer: {
+    command: "npx playwright --ui",
+    url: "https://www.saucedemo.com",
+    reuseExistingServer:true
+  }
+});
