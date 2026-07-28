@@ -8,7 +8,7 @@ export default defineConfig({
     ["html", { outputFile: "reports/html/report.html"}]],
   outputDir: "results",
   use: {
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
     video: "on-first-failure",
