@@ -1,9 +1,15 @@
 name: Playwright Tests
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment"
+        required: false
+        type: choice
+        options:
+          - qa
+          - staging
+          - prod
 jobs:
   test:
     timeout-minutes: 60
