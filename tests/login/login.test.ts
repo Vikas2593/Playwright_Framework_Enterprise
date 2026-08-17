@@ -10,13 +10,12 @@ test.describe("Login Tests", () => {
   test("User can login successfully", async ({ page }) => {
     const loginpage = new LoginPage(page);
     loginpage.login(config.env.username, config.env.password);
-    await expect(page.locator(".title")).toHaveText("Products");
+    await expect(page.locator("h6")).toHaveText("Dashboard");
   });
 
   test("User can login with invalid credentials", async ({ page }) => {
     const loginpage = new LoginPage(page);
     loginpage.login("invalid_user", "invalid_user");
-    await page.waitForSelector("h3");
-    await expect(page.locator("h3")).toContainText("Username");
+    await expect(page.getByRole('alert')).toBeVisible();
   });
 });
