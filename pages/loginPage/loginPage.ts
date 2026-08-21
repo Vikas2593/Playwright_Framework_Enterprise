@@ -16,7 +16,7 @@ export class LoginPage {
   // Actions
   async login(username: string, password: string): Promise<void> {
     await this.usernameInput.fill(username);
-    wait this.passwordInput.pressSequentially(password, { delay: 50 }); // types with a 50ms delay per key
+    await this.passwordInput.pressSequentially(password, { delay: 50 }); // types with a 50ms delay per key
     await this.loginButton.click();
   }
 }
