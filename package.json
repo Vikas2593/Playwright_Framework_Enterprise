@@ -12,7 +12,8 @@
     "test:report": "playwright generate-report",
     "test:allure": "npx playwright generate-report --output reports/allure",
     "test:ortoni": "npx playwright generate-report --output reports/ortoni",
-    "test:docker": "docker build -t playwright-saucedemo . && docker run -e npm_config_ENV=prod --name playwright-saucedemo-container playwright-saucedemo"
+    "test:docker": "docker build -t playwright-saucedemo . && docker run -e npm_config_ENV=prod --name playwright-saucedemo-container playwright-saucedemo",
+    "test: codegen": "npx playwright codegen"
   },
   "devDependencies": {
     "@playwright/test": "^1.46.0",
