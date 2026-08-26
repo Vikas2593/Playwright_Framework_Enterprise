@@ -1,7 +1,7 @@
-# Playwright Framework for SauceDemo
+# Playwright Framework for OrangeHRM
 
 ## Overview
-This is an enterprise-level Playwright framework for testing the [SauceDemo](https://www.saucedemo.com) website. It includes:
+This is an enterprise-level Playwright framework for testing the [OrangeHRM](https://opensource-demo.orangehrmlive.com/) website. It includes:
 
 - TypeScript support
 - Custom reporting
