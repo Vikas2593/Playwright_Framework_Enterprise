@@ -19,14 +19,10 @@ export default defineConfig({
       name: "chromium",
       use: { browserName: "chromium" }
     }
-    // {
-    //   name: "firefox",
-    //   use: { browserName: "firefox" }
-    // }
   ],
   webServer: {
     command: "npx playwright --ui",
-    url: "https://www.saucedemo.com",
+    url: "https://opensource-demo.orangehrmlive.com",
     reuseExistingServer:true
   }
 });
