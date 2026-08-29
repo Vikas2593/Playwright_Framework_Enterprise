@@ -9,6 +9,7 @@ This is an enterprise-level Playwright framework for testing the [OrangeHRM](htt
 - Docker support
 - Accessibility and performance testing
 - Logging and error handling
+- Default reporting and Parallelism
 
 ## Getting Started
 
