@@ -1,7 +1,8 @@
 # Playwright Framework for OrangeHRM
 
 ## Overview
-This is an enterprise-level Playwright framework for testing the [OrangeHRM](https://opensource-demo.orangehrmlive.com/) website. It includes:
+This is an enterprise-level Playwright framework for testing the [OrangeHRM](https://opensource-demo.orangehrmlive.com/) website. 
+It includes:
 
 - TypeScript support
 - Custom reporting
@@ -30,7 +31,6 @@ This is an enterprise-level Playwright framework for testing the [OrangeHRM](htt
 - `npm test:docker` - Run tests in Docker container
 
 ## Configuration
-
 - `testConfig.ts` - Contains test environment configuration
 - `playwright.config.ts` - Playwright configuration
 - `CustomReporterConfig.ts` - Custom logging configuration
